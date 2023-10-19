@@ -13,6 +13,7 @@ import Watch from "../Page/All Product/Watch/Watch";
 import Airpod from "../Page/All Product/Airpod/Airpod";
 import MacPro from "../Page/All Product/imac/MacPro";
 import Consol from "../Page/All Product/Consol/Consol";
+import ProductInfo from "../Page/Product_Info/ProductInfo";
 
 
 const router = createBrowserRouter([
@@ -74,7 +75,8 @@ const router = createBrowserRouter([
             },
             {
                 path: "/console/:console",
-                element: <Consol></Consol>
+                element: <Consol></Consol>,
+                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.console}`)
             },
             {
                 path: "/mac/:imac",
@@ -83,9 +85,15 @@ const router = createBrowserRouter([
 
             },
             {
-                path: "airpod/:airpod",
+                path: "/airpod/:airpod",
                 element: <Airpod></Airpod>,
                 loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.airpod}`)
+            },
+            {
+                path: "/getproduct/:id",
+                element: <ProductInfo></ProductInfo>,
+                loader: ({ params }) => fetch(`http://localhost:5000/getproduct/${params.id}`)
+
             }
 
 

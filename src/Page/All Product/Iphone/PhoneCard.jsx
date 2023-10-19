@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const PhoneCard = (e) => {
@@ -15,9 +16,9 @@ const PhoneCard = (e) => {
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{name}</h2>
                     <p className="text-lg font-bold" >{category}</p>
-                    <p className="max-h-40 overflow-auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates maxime eius distinctio vitae eos perspiciatis ducimus molestias, asperiores nostrum accusamus perferendis reiciendis eum quas porro dicta fugit minima quo dolorum.</p>
+                    <p className="max-h-40 overflow-auto">{description}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <Link to={`/getproduct/${_id}`}> <button className="btn btn-primary">Buy Now</button></Link>
                     </div>
                 </div>
             </div>
