@@ -17,7 +17,7 @@ const Phone = () => {
             <div>
                 <BannerIphone></BannerIphone>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-5 max-w-7xl mx-auto mt-20'>
                 {
                     phone.result.map((e) => <PhoneCard key={e._id} phon={e} ></PhoneCard>)
                 }

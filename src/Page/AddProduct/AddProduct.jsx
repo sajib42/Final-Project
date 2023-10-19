@@ -5,12 +5,12 @@ import Navbar from "../../layout/Navbar";
 import swal from 'sweetalert';
 
 const initialData = {
-    seller: 'asif@gmail.com',
+    seller: '',
     name: '',
     brandName: '',
     category: '',
     price: 0,
-    description: 'phone',
+    description: '',
     rating: 0,
     photo: '',
 
@@ -26,6 +26,7 @@ const AddProduct = () => {
         //console.log(name, value);
         setForm({ ...form, [name]: type === "file" ? files[0] : value });
 
+
     }
     async function handleSubmit(e) {
         e.preventDefault()
@@ -40,6 +41,7 @@ const AddProduct = () => {
         swal("successfull!", "Your Login success", "success");
         console.log(res.data.msg);
         console.log(product);
+
 
 
     }

@@ -8,6 +8,8 @@ import { FcGoogle } from 'react-icons/fc';
 import { useState } from "react";
 import swal from 'sweetalert';
 
+import login from "./../../img/Banner/login.png"
+
 const LoginPage = () => {
     const nextPage = useNavigate();
     const google = useContext(userContext)
@@ -70,7 +72,7 @@ const LoginPage = () => {
     return (
         <div className="flex items-center justify-center min-h-screen ">
             <div className=" w-3/5 hidden md:block   ">
-
+                <img className="max-h-screen" src={login} alt="" />
             </div>
             <div className=" card card-bordered min-h-fit md:w-2/5 mx-4 my-4 p-5 ">
                 <Link to={'/'} > <img src="" alt="" /></Link>

@@ -14,6 +14,8 @@ import Airpod from "../Page/All Product/Airpod/Airpod";
 import MacPro from "../Page/All Product/imac/MacPro";
 import Consol from "../Page/All Product/Consol/Consol";
 import ProductInfo from "../Page/Product_Info/ProductInfo";
+import PrivetRout from "./PrivetRout";
+import ErrorPage from "../Page/404/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -28,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/productAdd",
-                element: <AddProduct></AddProduct>
+                element: <PrivetRout><AddProduct></AddProduct></PrivetRout>
             },
             {
                 path: '/login',
@@ -41,7 +43,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/cart',
-                element: <AddCart></AddCart>
+                element: <PrivetRout><AddCart></AddCart></PrivetRout>
             },
             {
                 path: '/about',
@@ -91,9 +93,13 @@ const router = createBrowserRouter([
             },
             {
                 path: "/getproduct/:id",
-                element: <ProductInfo></ProductInfo>,
+                element: <PrivetRout><ProductInfo></ProductInfo></PrivetRout>,
                 loader: ({ params }) => fetch(`http://localhost:5000/getproduct/${params.id}`)
 
+            },
+            {
+                path: '/404',
+                element: <ErrorPage></ErrorPage>
             }
 
 

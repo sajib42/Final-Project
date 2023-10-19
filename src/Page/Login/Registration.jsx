@@ -12,23 +12,19 @@ const Registration = () => {
     const createUser = useContext(userContext)
     const { createNewUser } = createUser
     // const passwordRegex = /^(?=.*[A-Z])(?=.*\d).{6,}$/;
-    const passwordRegex = /^ [a - z] + $/;
+    // const passwordRegex = /^ [a - z] + $/;
     const onSubmit = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.pass.value;
         console.log(email, password)
 
-        if (password.length < 6) {
-            console.log('password should be 6 letter');
-            swal("an error occur", " password should be 6 character ", "error");
-            return
-        }
-        else if (!passwordRegex.test(password)) {
-            console.log('wrong password');
-            swal("an error occur", " should be 6 character a capital letter and a special character", "error");
-            return
-        }
+
+        // if (!passwordRegex.test(password)) {
+        //     console.log('wrong password');
+        //     swal("an error occur", " Try Again", "error");
+        //     return
+        // }
         createNewUser(email, password)
             .then(async (res) => {
                 console.log(res)
@@ -59,7 +55,7 @@ const Registration = () => {
                     <h2 className=" text-gray-900  text-4xl font-semibold py-6 text-center">Registration here</h2>
                     <form onSubmit={onSubmit} className="flex flex-col space-y-4 text-xl font-semibold" >
                         <p>Email address</p>
-                        <input className="input bg-gray-200 text-white" name="email" type="email" placeholder="enter your email here" />
+                        <input className="input bg-gray-200 text-black" name="email" type="email" placeholder="enter your email here" />
                         <p>Password</p>
                         <input className="input bg-gray-200 " name="pass" type="password" placeholder="enter your password here" />
                         <input className="btn bg-gray-900 text-white " type="submit" />
