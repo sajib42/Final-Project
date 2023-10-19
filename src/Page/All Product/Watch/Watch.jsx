@@ -3,6 +3,8 @@ import Navbar from '../../../layout/Navbar';
 import BannerIphone from '../Iphone/BannerIphone';
 import { useLoaderData } from 'react-router-dom';
 import PhoneCard from '../Iphone/PhoneCard';
+import WatchBanner from './WatchBanner';
+import Footer from '../../Footer/Footer';
 
 const Watch = () => {
     const watch = useLoaderData()
@@ -11,15 +13,17 @@ const Watch = () => {
         <div>
             <div>
                 <Navbar></Navbar>
-                <BannerIphone></BannerIphone>
+                <WatchBanner></WatchBanner>
             </div>
-            <div>
+            <div className='grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl'>
                 {
                     watch.result.map(e => <PhoneCard key={e._id} phon={e} ></PhoneCard>)
                 }
             </div>
+            <div>
+                <Footer></Footer>
+            </div>
 
-            watch
         </div>
     );
 };

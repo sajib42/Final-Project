@@ -1,28 +1,39 @@
-import Navbar from "../Navbar";
-import bannarImg from "./../../img/phone (2).jpg"
+
+
+
+import banner1 from "./../../img/Banner/watch2.png"
+import banner2 from "./../../img/Banner/air2.png"
+import banner3 from "./../../img/Banner/macbook3.png"
+import banner4 from "./../../img/Banner/xbox3.png"
+
 const BannerHome = () => {
     return (
         <div>
             <div>
-                <div className="z-20 fixed w-full">
-                    <Navbar></Navbar>
-                </div>
+
                 <div className=" max-w-screen-xl mx-auto   ">
                     <div className="carousel w-full">
                         <div id="item1" className="   carousel-item w-full relative ">
-                            <img src={bannarImg} className="w-full mt-10 rounded-md h-40 object-cover   lg:h-[550px]" />
-                            <div className="absolute -translate-y-1/2 left-5 right-5 top-1/2" >
-                                <p>THis is discirsdasd kj</p>
+                            <img src={banner3} className="w-full mt-10  h-40 object-cover   lg:h-[550px]" />
+                            <div className=" text-2xl text-white absolute -translate-y-1/2 left-5 right-5 top-1/2 md:space-y-4" >
+                                <p className="">Wellcome To </p>
+                                <p className="md:text-6xl font-semibold">Z-Gear Shop</p>
+                                <button className="btn btn-sm">Explore</button>
                             </div>
                         </div>
                         <div id="item2" className="carousel-item w-full">
-                            <img src="https://i.ibb.co/2WQnjjb/laptop-4.jpg" className="w-full mt-10 rounded-md h-40 object-cover  lg:h-[550px]" />
+                            <img src={banner2} className="w-full mt-10  h-40 object-cover  lg:h-[550px]" />
+                            {/* <div className=" text-2xl text-white absolute -translate-y-1/2 left-14 right-5 top-1/2 space-y-4" >
+                                <p> Experience of</p>
+                                <p className="md:text-6xl font-semibold">True Gaming</p>
+                                <button className="btn btn-sm">Explore</button>
+                            </div> */}
                         </div>
                         <div id="item3" className="carousel-item w-full">
-                            <img src="https://i.ibb.co/tqcc8H8/9139.jpg" className="w-full mt-10 rounded-md h-40 object-cover  lg:h-[550px]" />
+                            <img src={banner1} className="w-full mt-10  h-40 object-cover  lg:h-[550px]" />
                         </div>
                         <div id="item4" className="carousel-item w-full">
-                            <img src="https://i.ibb.co/y4wx7CH/tom-clancys-ghost-recon-wildlands-season-pass-wallpaper-1920x1080.jpg" className="w-full mt-10 object-cover rounded-md h-40  lg:h-[550px]" />
+                            <img src={banner4} className="w-full mt-10 object-cover  h-40  lg:h-[550px]" />
                         </div>
                     </div>
                     <div className="flex justify-center w-full py-2 gap-2">

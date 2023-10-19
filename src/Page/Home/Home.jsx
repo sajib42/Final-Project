@@ -10,12 +10,15 @@ const Home = () => {
     return (
         <>
             <section>
-
-                <section>
+                <section className="z-20 fixed w-full">
+                    <Navbar></Navbar>
+                </section>
+                <section className='pt-10'>
                     <BannerHome></BannerHome>
                 </section>
 
-                <section>
+                <section className='mt-16'>
+
                     <Products></Products>
                 </section>
                 <section>
