@@ -23,23 +23,23 @@ const Products = () => {
                         <img className=" w-full object-cover   md:h-96" src={laptopImg} alt="" />
                     </div>
                 </Link>
-                <Link className="border-2 col-span-2 md:h-96 " >
+                <Link to={`watch/${'watch'}`} className="border-2 col-span-2 md:h-96 " >
                     <div className="border-2 col-span-2 relative  md:h-96 " >
                         <p className="absolute" >Apple watch</p>
                         <img className=" w-full object-cover   md:h-96" src={productImg2} alt="" />
                     </div>
                 </Link>
-                <Link className="border-2 md:h-96  ">4
+                <Link to={`console/${'console'}`} className="border-2 md:h-96  ">4
                     <div className="md:h-96 w-full " >
                         <img className=" w-full object-cover h-full   md:h-96" src={productImg1} alt="" />
                     </div>
                 </Link>
-                <Link className="border-2 " >
+                <Link to={`airpod/${'airpod'}`} className="border-2 " >
                     <div className="border-2 " >5
                         <img className=" w-full object-cover   md:h-96" src={productImg3} alt="" />
                     </div>
                 </Link>
-                <Link className="border-2 col-span-2 ">
+                <Link to={`mac/${'imac'}`} className="border-2 col-span-2 "> imac
                     <div className="border-2 col-span-2 " >6
                         <img className=" w-full object-cover   md:h-96" src={productImg4} alt="" />
                     </div>

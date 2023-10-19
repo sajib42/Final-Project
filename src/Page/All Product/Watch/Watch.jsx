@@ -7,6 +7,7 @@ const Watch = () => {
             <div>
                 <Navbar></Navbar>
             </div>
+            watch
         </div>
     );
 };

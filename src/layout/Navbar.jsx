@@ -1,5 +1,7 @@
 
 import { Link } from 'react-router-dom';
+import logo from "./.././img/LOGo.png"
+import logo2 from "./.././img/LOGO2.png"
 
 const Navbar = () => {
     return (
@@ -13,25 +15,28 @@ const Navbar = () => {
                             </label>
                             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><Link to={"/"}>Home</Link></li>
-                                <li><Link to={"/productAdd"}>ADd Product</Link></li>
+                                <li><Link to={"/productAdd"}>Add Product</Link></li>
                                 <li><Link to={"/cart"}>Cart</Link></li>
                                 <li><Link to={"/about"}>About</Link></li>
                                 <li><Link to={"/blog"}>Blog</Link></li>
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl">Z-Gear</a>
+                        {/* <a className="btn btn-ghost normal-case text-xl">Z-Gear</a> */}
+                        <div>
+                            <img className='w-28  ' src={logo} alt="" />
+                        </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">
                         <ul className="menu menu-horizontal px-1">
                             <li><Link to={"/"}>Home</Link></li>
-                            <li><Link to={"/productAdd"}>ADd Product</Link></li>
-                            <li><Link to={"/cart"}>Cart</Link></li>
+                            <li><Link to={"/productAdd"}> Product +</Link></li>
+                            <li><Link to={"/cart"}>My Cart</Link></li>
                             <li><Link to={"/about"}>About</Link></li>
                             <li><Link to={"/blog"}>Blog</Link></li>
                         </ul>
                     </div>
                     <div className="navbar-end">
-                        <Link to={'/login'}> <a className="btn">Login</a></Link>
+                        <Link to={'/login'}> <a className="btn btm-nav-sm">Login</a></Link>
                     </div>
                 </div>
             </nav>

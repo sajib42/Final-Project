@@ -11,7 +11,7 @@ const Mackbook = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-            <div>
+            <div className='grid grid-cols-4'>
                 {
                     mac.result.map(mac => <PhoneCard key={mac._id} phon={mac}></PhoneCard>)
                 }

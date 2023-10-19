@@ -9,6 +9,11 @@ import About from "../Page/About/About";
 import Blog from "../Page/Blog/Blog";
 import Phone from "../Page/All Product/Iphone/Phone";
 import Mackbook from "../Page/All Product/Macbook/Mackbook";
+import Watch from "../Page/All Product/Watch/Watch";
+import Airpod from "../Page/All Product/Airpod/Airpod";
+import MacPro from "../Page/All Product/imac/MacPro";
+import Consol from "../Page/All Product/Consol/Consol";
+
 
 const router = createBrowserRouter([
     {
@@ -18,6 +23,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+
             },
             {
                 path: "/productAdd",
@@ -55,7 +61,33 @@ const router = createBrowserRouter([
                 element: <Mackbook></Mackbook>,
                 loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.macbook}`)
 
+            },
+            {
+                path: "/watch/:watch",
+                element: <Watch></Watch>,
+                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.watch}`)
+            },
+            {
+                path: "/airpod/:airpod",
+                element: <Airpod></Airpod>,
+                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.airpod}`)
+            },
+            {
+                path: "/console/:console",
+                element: <Consol></Consol>
+            },
+            {
+                path: "/mac/:imac",
+                element: <MacPro></MacPro>,
+                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.imac}`)
+
+            },
+            {
+                path: "airpod/:airpod",
+                element: <Airpod></Airpod>,
+                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.airpod}`)
             }
+
 
         ]
 
