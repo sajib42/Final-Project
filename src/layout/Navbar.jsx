@@ -23,7 +23,7 @@ const Navbar = () => {
                                 <li><Link to={"/productAdd"}>Add Product</Link></li>
                                 <li><Link to={"/getcartdata"}>Cart</Link></li>
                                 <li><Link to={"/about"}>Feedback</Link></li>
-                                <li><Link to={"/blog"}>Blog</Link></li>
+                                <li><Link to={"/blog"}>About Us</Link></li>
                             </ul>
                         </div>
                         {/* <a className="btn btn-ghost normal-case text-xl">Z-Gear</a> */}
@@ -36,8 +36,8 @@ const Navbar = () => {
                             <li><Link to={"/"}>Home</Link></li>
                             <li><Link to={"/productAdd"}> Product +</Link></li>
                             <li><Link to={"/getcartdata"}>My Cart</Link></li>
-                            <li><Link to={"/about"}>About</Link></li>
-                            <li><Link to={"/blog"}>Blog</Link></li>
+                            <li><Link to={"/about"}>Feedback</Link></li>
+                            <li><Link to={"/blog"}>About Us</Link></li>
                         </ul>
                     </div>
                     <div className="navbar-end ">

@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer";
 import { useContext } from 'react';
 import { userContext } from "../../Firebase/LoginContext";
 import axios from "axios";
+import swal from 'sweetalert';
 
 const ProductInfoPage = ({ product }) => {
     const { user } = useContext(userContext)
@@ -19,15 +20,18 @@ const ProductInfoPage = ({ product }) => {
         }
         const res = await axios.post(`http://localhost:5000/addtocart`, cartData)
         console.log(res.data.msg);
+        if (res.data.msg) {
+            swal("successfully!", "Your Product added", "success");
+        }
 
     }
     return (
-        <div>
-            <div className="flex justify-between w-full border-4 rounded-lg px-4 mt-20">
-                <div className="w-1/2   ">
+        <div className="px-4">
+            <div className=" py-4 flex flex-col md:flex-row justify-between w-full border-4 rounded-lg px-4 mt-20">
+                <div className="md:w-1/2   ">
                     <img className=" max-h-[500px] w-fit mx-auto  object-cover" src={photo} alt="" />
                 </div>
-                <div className="w-1/2 p-5 space-y-4 " >
+                <div className=" md:w-1/2 p-5 space-y-4 " >
                     <div className="space-y-2">
                         <p className="text-6xl font-semibold" >{name}</p>
                         <p className="text-2xl font-medium" >{brandName}</p>

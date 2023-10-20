@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { userContext } from "../../Firebase/LoginContext";
 import { data } from "autoprefixer";
 import CartDataCard from "./CartDataCard";
+import Footer from "../Footer/Footer";
 
 
 const AddCart = () => {
@@ -30,6 +31,9 @@ const AddCart = () => {
                 {
                     cart.map(e => <CartDataCard key={e._id} data={e}  ></CartDataCard>)
                 }
+            </div>
+            <div>
+                <Footer></Footer>
             </div>
         </div>
     );

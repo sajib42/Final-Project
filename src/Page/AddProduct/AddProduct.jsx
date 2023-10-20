@@ -39,11 +39,11 @@ const AddProduct = () => {
             // ["seller"] : sessnion.email
         }
         const res = await axios.post('http://localhost:5000/addproduct', product);
-        swal("successfull!", "Your Login success", "success");
+        swal("successfull!", "Add Product", "success");
         console.log(res.data.msg);
         console.log(product);
-        const form = e.target;
-        form.reset()
+        // const form = e.target;
+        // form.reset()
 
 
 
