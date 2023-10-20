@@ -3,6 +3,7 @@ import { uploadPhoto } from "../../helper";
 import axios from "axios";
 import Navbar from "../../layout/Navbar";
 import swal from 'sweetalert';
+import Footer from "../Footer/Footer";
 
 const initialData = {
     seller: '',
@@ -41,6 +42,8 @@ const AddProduct = () => {
         swal("successfull!", "Your Login success", "success");
         console.log(res.data.msg);
         console.log(product);
+        const form = e.target;
+        form.reset()
 
 
 
@@ -50,34 +53,41 @@ const AddProduct = () => {
         <div>
             <div>
                 <Navbar></Navbar>
+
             </div>
-            <h1>this is product page</h1>
+
             <div>
                 <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 gap-5 w-fit mx-auto">
+                        <label htmlFor="input">Product name</label>
                         <input onChange={handleChange} value={form.name} className="input input-bordered input-ghost w-full max-w-xs" type="text" name="name" placeholder="Name" />
+                        <label htmlFor="">Brand Name</label>
                         <input onChange={handleChange} value={form.brandName} className="input input-bordered input-ghost w-full max-w-xs" type="text" name="brandName" placeholder="Brand Name" />
-
+                        <label htmlFor="category">Category</label>
                         <select onChange={handleChange} name="category" className="select select-bordered w-full max-w-xs">
                             {
                                 category.map(cat => <option key={cat} value={cat}>{cat}</option>)
 
                             }
                         </select>
-                        <input onChange={handleChange} value={form.price} className="input input-bordered input-ghost w-full max-w-xs" type="number" name="price" placeholder="Price in BDT" />
-                        <textarea onChange={handleChange} className="input input-bordered input-ghost w-full max-w-xs" name="description" id="" cols="30" rows="10" placeholder="Short Description" ></textarea>
-
+                        <label htmlFor="">Rating</label>
                         <select name="rating" onChange={handleChange} className="select select-bordered w-full max-w-xs">
                             {
                                 rating.map(r => <option key={r} value={r}>{r}</option>)
                             }
                         </select>
+                        <label htmlFor="">Price in BDT</label>
+                        <input onChange={handleChange} value={form.price} className="input input-bordered input-ghost w-full max-w-xs" type="number" name="price" placeholder="Price in BDT" />
+                        <textarea onChange={handleChange} className="input input-bordered input-ghost w-full max-w-xs" name="description" id="" cols="30" rows="10" placeholder="Short Description" ></textarea>
+
+
                         <input onChange={handleChange} name="photo" type="file" />
                         <input className="btn btn-outline" type="submit" />
 
                     </div>
                 </form>
             </div>
+            <div><Footer></Footer></div>
         </div>
     );
 };
