@@ -1,18 +1,24 @@
 
+import { CiLight } from "react-icons/ci";
 import { Link } from 'react-router-dom';
 import logo from "./.././img/LOGo.png"
-import logo2 from "./.././img/LOGO2.png"
+
+
 
 import { useContext } from 'react';
 import { userContext } from './../Firebase/LoginContext';
 
-const Navbar = () => {
+
+const Navbar = (theme) => {
+
+    const { handelTheme } = theme
+
     const { user, logOut } = useContext(userContext)
     const logOutBtn = () => logOut();
     return (
         <div>
             <nav >
-                <div className="navbar bg-base-100 flex  ">
+                <div className="navbar bg-base-100 flex dark:bg-gray-600 dark:text-white ">
                     <div className="navbar-start ">
                         <div className="dropdown">
                             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -24,6 +30,7 @@ const Navbar = () => {
                                 <li><Link to={"/getcartdata"}>Cart</Link></li>
                                 <li><Link to={"/about"}>Feedback</Link></li>
                                 <li><Link to={"/blog"}>About Us</Link></li>
+                                <li><Link onClick={handelTheme}  ><CiLight></CiLight></Link></li>
                             </ul>
                         </div>
                         {/* <a className="btn btn-ghost normal-case text-xl">Z-Gear</a> */}
@@ -38,6 +45,9 @@ const Navbar = () => {
                             <li><Link to={"/getcartdata"}>My Cart</Link></li>
                             <li><Link to={"/about"}>Feedback</Link></li>
                             <li><Link to={"/blog"}>About Us</Link></li>
+                            <li ><Link onClick={handelTheme}  ><CiLight className=" text-xl" ></CiLight></Link></li>
+
+
                         </ul>
                     </div>
                     <div className="navbar-end ">
@@ -67,6 +77,7 @@ const Navbar = () => {
                                 </>
                         }
                         {/* <Link to={'/login'}> <a className="btn btm-nav-sm">Login</a></Link> */}
+
                     </div>
 
                 </div>

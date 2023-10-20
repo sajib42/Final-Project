@@ -10,8 +10,8 @@ import { Link } from 'react-router-dom';
 const Products = () => {
     return (
         <div className="text-gray-900">
-            <h1 className="text-4xl font-semibold md:text-center p-5 mb-10 bg-base-200  max-w-6xl mx-auto" >Our ProductS</h1>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-10   max-w-6xl mx-auto">
+            <h1 className="text-4xl font-semibold md:text-center p-5 mb-10 bg-base-200  max-w-6xl mx-auto dark:bg-gray-700 dark:text-white" >Our ProductS</h1>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-10 text-black dark:text-gray-600  max-w-6xl mx-auto">
                 <Link to={`phone/${'iphone'}`} className="col-span-2 md:col-span-1 w-full md:h-96 ">
                     <div className=" w-full md:h-96   " >
                         <p className="absolute text-4xl font-medium px-2 " >I Phone</p>
@@ -49,7 +49,7 @@ const Products = () => {
                     </div>
                 </Link>
             </div>
-            <h1 className="text-4xl font-semibold md:text-center p-5 mt-10 bg-base-200  max-w-6xl mx-auto" ></h1>
+            <h1 className="text-4xl font-semibold md:text-center p-5 mt-10 bg-base-200  max-w-6xl mx-auto dark:bg-gray-700" ></h1>
         </div>
     );
 };
