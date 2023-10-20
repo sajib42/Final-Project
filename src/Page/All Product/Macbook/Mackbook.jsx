@@ -16,12 +16,26 @@ const Mackbook = () => {
             <div>
                 <MacBanner></MacBanner>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto mt-20'>
+            <div>
                 {
-                    mac.result.map(mac => <PhoneCard key={mac._id} phon={mac}></PhoneCard>)
+                    mac ? <div className='grid grid-cols-1 md:grid-cols-4 gap-0
+                    max-w-7xl mx-auto mt-20'>
+                        {
+                            mac.result.map(mac => <PhoneCard key={mac._id} phon={mac}></PhoneCard>)
+                        }
+                    </div>
+                        :
+                        <div>
+                            <h1>No product</h1>
+                        </div>
+
                 }
             </div>
             <div>
+
+            </div>
+            <div>
+
                 <Footer></Footer>
             </div>
         </div>

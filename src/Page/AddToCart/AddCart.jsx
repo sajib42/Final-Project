@@ -17,7 +17,7 @@ const AddCart = () => {
     const [cart, setCart] = useState([]);
     // const data = useLoaderData()
     useEffect(() => {
-        fetch(`http://localhost:5000/getcartdata/${email}`)
+        fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${email}`)
             .then(res => res.json())
             .then(data => setCart(data))
     }, [])
@@ -27,7 +27,10 @@ const AddCart = () => {
             <div>
                 <Navbar></Navbar>
             </div>
-            <div className="grid  gap-4 grid-cols-1 md:grid-cols-2 p-10">
+            <div>
+                <h1 className="font-semibold md:text-6xl p-4 text-center">My Shopping Cart</h1>
+            </div>
+            <div className="grid  gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-10">
                 {
                     cart.map(e => <CartDataCard key={e._id} data={e}  ></CartDataCard>)
                 }

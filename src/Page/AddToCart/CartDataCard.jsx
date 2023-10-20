@@ -4,10 +4,12 @@ import { useState } from 'react';
 import swal from 'sweetalert';
 
 
+
 const CartDataCard = ({ data }) => {
     console.log(data);
     const initUser = data
     const [product, setProduct] = useState(initUser)
+    const [isDetele, setDelete] = useState(false)
     const { category, brandName, description, name, photo, price, rating, seller, _id
     } = data
     console.log(category);
@@ -16,15 +18,21 @@ const CartDataCard = ({ data }) => {
     const handelDelete = (_id) => {
         // e.preventDefault()
         console.log(`delet`, _id);
-        fetch(`http://localhost:5000/getcartdata/${_id}`, {
+        fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${_id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
-            .then(data => {
+            .then(async data => {
                 console.log(data)
                 swal("Deleted!", "Deleted ", "success");
-                const remaining = product.filter(user => user._id !== _id)
-                setProduct(remaining)
+                // const remaining = product.filter(user => user._id !== _id)
+                // setProduct(remaining)
+
+                await new Promise(() => {
+                    setTimeout(() => {
+                        window.location.reload()
+                    }, 100);
+                })
             })
     }
 

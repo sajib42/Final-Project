@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   // async function getData() {
-  //   const data = await axios.get('http://localhost:5000/getproduct')
+  //   const data = await axios.get('https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct')
   //   console.log(data.data);
 
   // }

@@ -8,7 +8,7 @@ const GmingBanner = () => {
             <div className=" max-w-screen-xl mx-auto   ">
                 <div className="carousel w-full">
                     <div id="item1" className="   carousel-item w-full relative ">
-                        <img src={banner1} className="w-full mt-10 rounded-md h-40 object-cover   lg:h-[550px]" />
+                        <img src={banner2} className="w-full mt-10 rounded-md h-40 object-cover   lg:h-[550px]" />
                         <div className="absolute -translate-y-1/2 left-5 right-5 top-1/2" >
 
                         </div>
@@ -17,7 +17,7 @@ const GmingBanner = () => {
                         <img src={banner3} className="w-full mt-10 rounded-md h-40 object-cover  lg:h-[550px]" />
                     </div>
                     <div id="item3" className="carousel-item w-full">
-                        <img src={banner2} className="w-full mt-10 rounded-md h-40 object-cover  lg:h-[550px]" />
+                        <img src={banner1} className="w-full mt-10 rounded-md h-40 object-cover  lg:h-[550px]" />
                     </div>
 
                 </div>

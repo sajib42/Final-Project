@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Products = () => {
     return (
-        <div>
+        <div className="text-gray-900">
             <h1 className="text-4xl font-semibold md:text-center p-5 mb-10 bg-base-200  max-w-6xl mx-auto" >Our ProductS</h1>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-10   max-w-6xl mx-auto">
                 <Link to={`phone/${'iphone'}`} className="col-span-2 md:col-span-1 w-full md:h-96 ">
@@ -32,7 +32,7 @@ const Products = () => {
                 </Link>
                 <Link to={`console/${'console'}`} className="col-span-2 md:col-span-1 md:h-96  ">
                     <div className=" md:h-96 w-full " >
-                        <p className="absolute text-4xl font-medium px-2 " >console</p>
+                        <p className="absolute text-4xl font-medium px-2 " >Console</p>
                         <img className="z-10 hover:ease-in-out hover:transition-transform hover:translate-y-10 w-full object-cover h-full   md:h-96" src={productImg1} alt="" />
                     </div>
                 </Link>

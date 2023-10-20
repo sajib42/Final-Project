@@ -16,6 +16,7 @@ import Consol from "../Page/All Product/Consol/Consol";
 import ProductInfo from "../Page/Product_Info/ProductInfo";
 import PrivetRout from "./PrivetRout";
 import ErrorPage from "../Page/404/ErrorPage";
+import UpdatePage from "../Page/update/UpdatePage";
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
             {
                 path: '/getcartdata',
                 element: <PrivetRout><AddCart></AddCart></PrivetRout>,
-                // loader: ({ params }) => fetch(`http://localhost:5000/getcartdata/${params.email}`)
+                // loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${params.email}`)
             },
             {
                 path: '/about',
@@ -57,46 +58,52 @@ const router = createBrowserRouter([
             {
                 path: "/phone/:phone",
                 element: <Phone></Phone>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.phone}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.phone}`)
 
             },
             {
                 path: "/mac/:macbook",
                 element: <Mackbook></Mackbook>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.macbook}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.macbook}`)
 
             },
             {
                 path: "/watch/:watch",
                 element: <Watch></Watch>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.watch}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.watch}`)
             },
             {
                 path: "/airpod/:airpod",
                 element: <Airpod></Airpod>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.airpod}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.airpod}`)
             },
             {
                 path: "/console/:console",
                 element: <Consol></Consol>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.console}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.console}`)
             },
             {
                 path: "/mac/:imac",
                 element: <MacPro></MacPro>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.imac}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.imac}`)
 
             },
             {
                 path: "/airpod/:airpod",
                 element: <Airpod></Airpod>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct2/${params.airpod}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.airpod}`)
             },
             {
                 path: "/getproduct/:id",
                 element: <PrivetRout><ProductInfo></ProductInfo></PrivetRout>,
-                loader: ({ params }) => fetch(`http://localhost:5000/getproduct/${params.id}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct/${params.id}`)
 
+            },
+
+            {
+                path: "/update/:id",
+                element: <UpdatePage></UpdatePage>,
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct/${params.id}`)
             },
             {
                 path: '/404',

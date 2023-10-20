@@ -38,7 +38,7 @@ const AddProduct = () => {
             ...form, ["photo"]: result.data.secure_url,
             // ["seller"] : sessnion.email
         }
-        const res = await axios.post('http://localhost:5000/addproduct', product);
+        const res = await axios.post('https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/addproduct', product);
         swal("successfull!", "Add Product", "success");
         console.log(res.data.msg);
         console.log(product);
