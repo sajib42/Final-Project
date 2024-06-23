@@ -30,6 +30,7 @@ const Navbar = (theme) => {
                                 <li><Link to={"/getcartdata"}>Cart</Link></li>
                                 <li><Link to={"/about"}>Feedback</Link></li>
                                 <li><Link to={"/blog"}>About Us</Link></li>
+                                <li><Link to={"/blog"}>Admin Panel</Link></li>
                                 <li><Link onClick={handelTheme}  ><CiLight></CiLight></Link></li>
                             </ul>
                         </div>
@@ -45,6 +46,7 @@ const Navbar = (theme) => {
                             <li><Link to={"/getcartdata"}>My Cart</Link></li>
                             <li><Link to={"/about"}>Feedback</Link></li>
                             <li><Link to={"/blog"}>About Us</Link></li>
+                            <li><Link to={"/admin"}>Admin Panel</Link></li>
                             <li ><Link onClick={handelTheme}  ><CiLight className=" text-xl" ></CiLight></Link></li>
 
 

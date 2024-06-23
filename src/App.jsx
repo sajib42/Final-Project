@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
+import Footer from './Page/Footer/Footer'
 // import { Link, NavLink } from 'react-router-dom';
 // import axios from 'axios';
 // import { useEffect } from 'react';
@@ -19,7 +20,10 @@ function App() {
     <>
 
       {/* <Link to={"/"}>this is root // root</Link> */}
-      <Outlet></Outlet>
+      <div className='min-h-screen'>
+        <Outlet></Outlet>
+      </div>
+
     </>
   )
 }

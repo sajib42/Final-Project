@@ -18,7 +18,7 @@ const Mackbook = () => {
             </div>
             <div>
                 {
-                    mac ? <div className='grid grid-cols-1 md:grid-cols-4 gap-0
+                    mac?.result.length ? <div className='grid grid-cols-1 md:grid-cols-4 gap-0
                     max-w-7xl mx-auto mt-20'>
                         {
                             mac.result.map(mac => <PhoneCard key={mac._id} phon={mac}></PhoneCard>)

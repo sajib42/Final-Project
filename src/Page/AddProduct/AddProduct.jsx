@@ -14,10 +14,9 @@ const initialData = {
     description: '',
     rating: 0,
     photo: '',
-
-
 }
-const category = ["iphone", "macbook", 'watch', 'console', 'airpod', 'imac'];
+
+const category = ["iphone", "Laptop", 'Smart watch', 'Android', 'EarPhon', 'Camera'];
 const rating = [1, 2, 3, 4, 5];
 
 const AddProduct = () => {

@@ -13,7 +13,7 @@ const ProductInfo = () => {
             </div>
             <div>
                 {
-                    product.result.map(product => <ProductInfoPage key={product._id} product={product} ></ProductInfoPage>)
+                    product?.result.length ? product.result.map(product => <ProductInfoPage key={product._id} product={product} ></ProductInfoPage>) : <h1>Loading</h1>
                 }
             </div>
         </div>

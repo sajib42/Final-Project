@@ -2,8 +2,8 @@
 
 const Footer = () => {
     return (
-        <div>
-            <footer className="footer footer-center p-10 bg-slate-200 dark:bg-slate-700 dark:text-white  text-base-content rounded mt-20">
+        <div className=" bg-slate-200">
+            <footer className="footer  footer-center p-10 bg-slate-200 dark:bg-slate-700 dark:text-white  text-base-content rounded mt-20">
                 <nav className="grid grid-flow-col gap-4">
                     <a className="link link-hover">About us</a>
                     <a className="link link-hover">Contact</a>
@@ -18,7 +18,7 @@ const Footer = () => {
                     </div>
                 </nav>
                 <aside>
-                    <p>Copyright © 2023 -  <em> All right reserved by Zarjij Hasan Joy</em></p>
+                    <p>Copyright © 2023 -   All right reserved by S.K Sojib</p>
                 </aside>
             </footer>
         </div>

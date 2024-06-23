@@ -5,6 +5,7 @@ import BannerHome from '../../layout/Banner/BannerHome';
 import Navbar from '../../layout/Navbar';
 import Footer from '../Footer/Footer';
 import Products from '../Product_Ctg/Products';
+import CarouselMain from '../../Component/CarouselMain.';
 
 const Home = () => {
     const [theme, setTheme] = useState("light")
@@ -27,17 +28,17 @@ const Home = () => {
             <section className='bg-white dark:bg-black'>
                 <section className="z-20 fixed w-full">
                     <Navbar handelTheme={handelTheme} ></Navbar>
-
                 </section>
 
                 <section className='pt-10'>
-                    <BannerHome></BannerHome>
+                    {/* <BannerHome></BannerHome> */}
+                    <CarouselMain />
                 </section>
 
                 <section className='mt-16'>
-
                     <Products></Products>
                 </section>
+
                 <section>
                     <Footer></Footer>
                 </section>

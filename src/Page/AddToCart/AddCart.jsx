@@ -29,6 +29,8 @@ const AddCart = () => {
             </div>
             <div>
                 <h1 className="font-semibold md:text-6xl p-4 text-center">My Shopping Cart</h1>
+
+
             </div>
             <div className="grid  gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-10">
                 {

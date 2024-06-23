@@ -1,6 +1,7 @@
 
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
 
 
@@ -44,13 +45,19 @@ const CartDataCard = ({ data }) => {
         <div>
             <div className="card card-side bg-base-100 shadow-xl flex flex-col ju">
                 <figure className='  '><img className=' p-10 w-96 h-96 object-cover mx-auto' src={photo} alt="Movie" /></figure>
-                <div className="card-body">
+                <div className="card-body ">
                     <h2 className="card-title">{name}</h2>
-                    <p>{description}</p>
+                    <p className='h-48 overflow-auto'>{description}</p>
 
                     <div className="card-actions justify-end items-center ">
                         <p className='font-semibold text-red-600'>{price} BDT</p>
-                        <button onClick={() => handelDelete(_id)} className="btn btn-warning">Delete</button>
+                        <div className=' w-full flex justify-between items-center gap-4  py-2'>
+                            <Link state={{ currentProduct: data }} className='btn btn-success text-white w-1/2' to={`/buy_now/${_id}`}>
+                                Buy Now
+                            </Link>
+
+                            <button onClick={() => handelDelete(_id)} className="btn btn-error text-white w-1/2">Delete</button>
+                        </div>
                     </div>
                 </div>
             </div>

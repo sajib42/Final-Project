@@ -17,6 +17,7 @@ const Blog = () => {
                 </p>
 
             </div>
+
             <div><Footer></Footer></div>
         </div>
     );

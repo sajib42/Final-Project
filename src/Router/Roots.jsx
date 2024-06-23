@@ -17,6 +17,11 @@ import ProductInfo from "../Page/Product_Info/ProductInfo";
 import PrivetRout from "./PrivetRout";
 import ErrorPage from "../Page/404/ErrorPage";
 import UpdatePage from "../Page/update/UpdatePage";
+import AdminDash from "../layout/admin/AdminDash";
+import BuyPage from "../Page/AddToCart/BuyPage";
+import PaymentPage from "../Page/AddToCart/PaymentPage";
+import BkashPay from "../Page/AddToCart/BkashPay";
+import CardPayment from "../Page/AddToCart/CardPayment";
 
 
 const router = createBrowserRouter([
@@ -45,7 +50,7 @@ const router = createBrowserRouter([
             {
                 path: '/getcartdata',
                 element: <PrivetRout><AddCart></AddCart></PrivetRout>,
-                // loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${params.email}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${params.email}`)
             },
             {
                 path: '/about',
@@ -62,9 +67,9 @@ const router = createBrowserRouter([
 
             },
             {
-                path: "/mac/:macbook",
+                path: "/mac/:id",
                 element: <Mackbook></Mackbook>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.macbook}`)
+                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.id}`)
 
             },
             {
@@ -99,11 +104,26 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct/${params.id}`)
 
             },
-
             {
                 path: "/update/:id",
                 element: <UpdatePage></UpdatePage>,
                 loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct/${params.id}`)
+            },
+            {
+                path: '/buy_now/:id',
+                element: <BuyPage />
+            },
+            {
+                path: '/payment/:id',
+                element: <PaymentPage />
+            },
+            {
+                path: '/bkash',
+                element: <BkashPay />
+            },
+            {
+                path: '/card_pay',
+                element: <CardPayment />
             },
             {
                 path: '/404',
@@ -113,6 +133,15 @@ const router = createBrowserRouter([
 
         ]
 
+
+
+    },
+    {
+        path: '/admin',
+        element: <AdminDash />,
+        children: [
+            {}
+        ]
     }
 
 ]);

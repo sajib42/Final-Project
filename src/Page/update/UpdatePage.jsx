@@ -1,10 +1,12 @@
 import axios from "axios";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Navbar from "../../layout/Navbar";
 import Footer from "../Footer/Footer";
+import swal from "sweetalert";
 
 
 const UpdatePage = () => {
+    const nextPage = useNavigate();
     const productData = useLoaderData();
     const { category, brandName, description, name, photo, price, rating, seller, _id
     } = productData.result[0]
@@ -25,6 +27,12 @@ const UpdatePage = () => {
         console.log(typeof (price));
         const newData = { name, price, newBrand, newCategory, newRating, newDescription }
         await axios.put(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/update/${_id}`, newData)
+        swal("Updated", " Product Updated ", "success");
+        await new Promise(() => {
+            setTimeout(() => {
+                nextPage("/")
+            }, 1000);
+        })
         window.location.reload();
     }
 
