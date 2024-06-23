@@ -22,6 +22,7 @@ import BuyPage from "../Page/AddToCart/BuyPage";
 import PaymentPage from "../Page/AddToCart/PaymentPage";
 import BkashPay from "../Page/AddToCart/BkashPay";
 import CardPayment from "../Page/AddToCart/CardPayment";
+import DeliveryPage from "../Page/Delivery/DeliveryPage";
 
 
 const router = createBrowserRouter([
@@ -128,6 +129,10 @@ const router = createBrowserRouter([
             {
                 path: '/404',
                 element: <ErrorPage></ErrorPage>
+            },
+            {
+                path: '/delivery',
+                element: <DeliveryPage />
             }
 
 
@@ -138,7 +143,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/admin',
-        element: <AdminDash />,
+        element: <PrivetRout> <AdminDash /> </PrivetRout>,
         children: [
             {}
         ]

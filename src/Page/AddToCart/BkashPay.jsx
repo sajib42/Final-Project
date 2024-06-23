@@ -1,6 +1,18 @@
+import { Link, useLocation } from "react-router-dom";
+import swal from "sweetalert";
 
 
 const BkashPay = () => {
+    const nextPage = useLocation('/')
+    const handelBkash = (e) => {
+        // e.preventDefault()
+        swal("successfull!", "Payment information added", "success");
+        // setTimeout(
+        //     nextPage
+        //     , 1000);
+
+
+    }
     return (
         <div>
             <section className="flex justify-between items-center px-4">
@@ -56,9 +68,9 @@ const BkashPay = () => {
 
                     </form>
                     <div className="mt-6 w-full flex items-center justify-center">
-                        <button className="btn btn-wide bg-[#f18cb6] hover:bg-[#D12054] text-white">
+                        <Link to={'/delivery'} onClick={handelBkash} className="btn btn-wide bg-[#f18cb6] hover:bg-[#D12054] text-white">
                             Proceed Now
-                        </button>
+                        </Link>
                     </div>
                 </section>
             </section>

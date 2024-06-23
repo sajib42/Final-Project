@@ -15,7 +15,7 @@ const CarouselMain = () => {
                 showThumbs={false}
                 width={false}
                 stopOnHover={false}
-                interval={3000}
+                interval={1000}
             // className="w-fit mx-auto  "
 
             >

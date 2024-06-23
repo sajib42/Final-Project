@@ -13,7 +13,7 @@ const AdminDash = () => {
                     <AdminNav />
                 </div>
                 <div>
-                    Admin panel page
+
                     <OderTable />
                     <Outlet />
                 </div>
