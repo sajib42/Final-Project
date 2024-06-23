@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Leroy Jenkins",
+        "rating": 4.5,
+        "date": "2 days ago",
+        "review": "Great product! Arrived on time and in perfect condition. The packaging was secure and the item works as expected. Highly recommended."
+    },
+    {
+        "name": "Jane Doe",
+        "rating": 4.7,
+        "date": "3 days ago",
+        "review": "Very satisfied with my purchase. The quality is excellent and the delivery was prompt. I would definitely buy from this seller again."
+    },
+    {
+        "name": "John Smith",
+        "rating": 4.8,
+        "date": "1 week ago",
+        "review": "Exceptional service and fast shipping. The product met all my expectations and I couldn't be happier with it. Five stars!"
+    },
+    {
+        "name": "Emily Johnson",
+        "rating": 4.6,
+        "date": "5 days ago",
+        "review": "Good value for money. The product is as described and works perfectly. The delivery was on time and the customer service was helpful."
+    },
+    {
+        "name": "Michael Brown",
+        "rating": 4.4,
+        "date": "4 days ago",
+        "review": "Overall a positive experience. The item was delivered quickly and in good condition. The quality is decent for the price."
+    }
+]

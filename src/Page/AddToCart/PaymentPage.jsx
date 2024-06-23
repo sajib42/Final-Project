@@ -15,14 +15,13 @@ const PaymentPage = () => {
                 <div className="divider"></div>
                 <div className="flex justify-center items-center mt-20 gap-4 w-fit mx-auto">
                     <Link to={'/bkash'}>
-                        <img className="w-48  border rounded-md hover:bg-sky-300  p-2" src="/src/assets/pay/bikas.jpg" alt="" />
+                        <img className="w-48  border rounded-md hover:bg-pink-500  p-2" src="/src/assets/pay/bikas.jpg" alt="" />
                     </Link>
-                    <img className="w-48  border rounded-md hover:bg-sky-300  p-2" src="/src/assets/pay/nogod.jpg" alt="" />
-
+                    <Link to={'/nagad'}> <img className="w-48  border rounded-md hover:bg-[#F69220]  p-2" src="/src/assets/pay/nogod.jpg" alt="" /></Link>
                     <Link to={'/card_pay'}>
                         <img className="w-48  border rounded-md hover:bg-sky-300  p-2" src="/src/assets/pay/master.jpg" alt="" />
                     </Link>
-                    <img className="w-80 p-4  border rounded-md hover:bg-sky-300  " src="/src/assets/pay/visa.jpg" alt="" />
+
                 </div>
 
             </section>

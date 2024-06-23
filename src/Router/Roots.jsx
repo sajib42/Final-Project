@@ -23,6 +23,7 @@ import PaymentPage from "../Page/AddToCart/PaymentPage";
 import BkashPay from "../Page/AddToCart/BkashPay";
 import CardPayment from "../Page/AddToCart/CardPayment";
 import DeliveryPage from "../Page/Delivery/DeliveryPage";
+import NagadPay from "../Page/AddToCart/NagadPay";
 
 
 const router = createBrowserRouter([
@@ -133,6 +134,10 @@ const router = createBrowserRouter([
             {
                 path: '/delivery',
                 element: <DeliveryPage />
+            },
+            {
+                path: '/nagad',
+                element: <NagadPay />
             }
 
 
