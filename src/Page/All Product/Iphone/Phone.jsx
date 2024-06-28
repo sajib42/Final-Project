@@ -1,6 +1,6 @@
 
 import Navbar from '../../../layout/Navbar';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useSearchParams } from 'react-router-dom';
 import PhoneCard from './PhoneCard';
 import BannerIphone from './BannerIphone';
 import Footer from '../../Footer/Footer';
@@ -8,7 +8,15 @@ import Footer from '../../Footer/Footer';
 
 const Phone = () => {
     const phone = useLoaderData();
-    console.log(phone.result, 'phn');
+    // const id = useSearchParams()
+    // console.log(id);
+    // 
+    // console.log(phone);
+    if (!phone) {
+        return (
+            <h1>Lodaing</h1>
+        )
+    }
 
     return (
         <div>

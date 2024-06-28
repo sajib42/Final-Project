@@ -11,6 +11,7 @@ import AirpodBanner from './AirpodBanner';
 const Airpod = () => {
     const airpod = useLoaderData()
     // console.log(watch.result);
+    console.log(airpod.result);
     return (
         <div>
             <div>

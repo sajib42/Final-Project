@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import swal from 'sweetalert';
+import url from '../../url';
 
 
 
@@ -19,7 +20,7 @@ const CartDataCard = ({ data }) => {
     const handelDelete = (_id) => {
         // e.preventDefault()
         console.log(`delet`, _id);
-        fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${_id}`, {
+        fetch(`${url}/getcartdata/${_id}`, {
             method: "DELETE"
         })
             .then(res => res.json())

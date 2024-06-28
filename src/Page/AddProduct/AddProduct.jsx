@@ -4,6 +4,8 @@ import axios from "axios";
 import Navbar from "../../layout/Navbar";
 import swal from 'sweetalert';
 import Footer from "../Footer/Footer";
+import url from "../../url";
+
 
 const initialData = {
     seller: '',
@@ -37,7 +39,7 @@ const AddProduct = () => {
             ...form, ["photo"]: result.data.secure_url,
             // ["seller"] : sessnion.email
         }
-        const res = await axios.post('https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/addproduct', product);
+        const res = await axios.post(`${url}/addproduct`, product);
         swal("successfull!", "Add Product", "success");
         console.log(res.data.msg);
         console.log(product);

@@ -18,31 +18,32 @@ const Products = () => {
                         <img className=" object-cover hover:ease-in-out hover:duration-300 hover:transition-transform hover:translate-y-10 duration-300  w-full md:h-96 " src={phone} alt="" />
                     </div>
                 </Link>
-                <Link to={`mac/${'macbook'}`} className=" col-span-2 md:h-96 hover:text-black ">
+                <Link to={`mac/${'Laptop'}`} className=" col-span-2 md:h-96 hover:text-black ">
                     <div className=" col-span-2 md:h-96  " >
                         <p className="absolute text-4xl font-medium px-2 " >Laptop</p>
                         <img className="hover:ease-in-out hover:transition-transform hover:translate-y-10  w-full object-cover hover:duration-300 duration-300   md:h-96" src={laptopImg} alt="" />
                     </div>
                 </Link>
-                <Link to={`watch/${'watch'}`} className=" col-span-2 md:h-96 " >
+                <Link to={`watch/${'Smart watch'}`} className=" col-span-2 md:h-96 " >
                     <div className=" col-span-2 relative  md:h-96 " >
                         <p className="absolute text-4xl font-medium px-2 " >Smart Watch</p>
                         <img className="hover:ease-in-out hover:transition-transform hover:translate-y-10 w-full object-cover hover:duration-300 duration-300  md:h-96" src={productImg2} alt="" />
                     </div>
                 </Link>
-                <Link to={`console/${'console'}`} className="col-span-2 md:col-span-1 md:h-96  ">
+                <Link to={`console/${'Android'}`} className="col-span-2 md:col-span-1 md:h-96  ">
                     <div className=" md:h-96 w-full " >
                         <p className="absolute text-4xl font-medium px-2 " >Android</p>
                         <img className="z-10 hover:ease-in-out hover:transition-transform hover:translate-y-10 w-full object-cover h-full hover:duration-300 duration-300  md:h-96" src={productImg1} alt="" />
                     </div>
                 </Link>
-                <Link to={`airpod/${'airpod'}`} className="col-span-2 md:col-span-1  md:h-96 " >
+                <Link to={`airpod/${'EarPhone'}`} className="col-span-2 md:col-span-1  md:h-96 " >
                     <div className=" " >
                         <p className="absolute text-4xl font-medium px-2 " >EarPhone</p>
                         <img className="z-50 hover:ease-in-out hover:transition-transform hover:translate-y-10 w-full object-cover hover:duration-300 duration-300   md:h-96" src={productImg3} alt="" />
                     </div>
                 </Link>
-                <Link to={`mac/${'imac'}`} className=" col-span-2 ">
+                {/* imac */}
+                <Link to={`mac/${'Camera'}`} className=" col-span-2 ">
                     <div className="col-span-2 " >
                         <p className="absolute text-4xl font-medium px-2 " >Camera</p>
                         <img className="z-50  hover:ease-in-out hover:transition-transform hover:translate-y-10 w-full object-cover hover:duration-300 duration-300   md:h-96" src={productImg4} alt="" />

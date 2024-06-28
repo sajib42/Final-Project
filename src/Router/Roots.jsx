@@ -24,6 +24,8 @@ import BkashPay from "../Page/AddToCart/BkashPay";
 import CardPayment from "../Page/AddToCart/CardPayment";
 import DeliveryPage from "../Page/Delivery/DeliveryPage";
 import NagadPay from "../Page/AddToCart/NagadPay";
+import url from "../url";
+
 
 
 const router = createBrowserRouter([
@@ -52,7 +54,7 @@ const router = createBrowserRouter([
             {
                 path: '/getcartdata',
                 element: <PrivetRout><AddCart></AddCart></PrivetRout>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${params.email}`)
+                loader: ({ params }) => fetch(`${url}/getcartdata/${params.email}`)
             },
             {
                 path: '/about',
@@ -65,51 +67,51 @@ const router = createBrowserRouter([
             {
                 path: "/phone/:phone",
                 element: <Phone></Phone>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.phone}`)
+                loader: ({ params }) => fetch(`${url}/getproduct2/${params.phone}`)
 
             },
             {
                 path: "/mac/:id",
                 element: <Mackbook></Mackbook>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.id}`)
+                loader: ({ params }) => fetch(`${url}/getproduct2/${params.id}`)
 
             },
             {
                 path: "/watch/:watch",
                 element: <Watch></Watch>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.watch}`)
+                loader: ({ params }) => fetch(`${url}/getproduct2/${params.watch}`)
             },
             {
                 path: "/airpod/:airpod",
                 element: <Airpod></Airpod>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.airpod}`)
+                loader: ({ params }) => fetch(`${url}/getproduct2/${params.airpod}`)
             },
             {
                 path: "/console/:console",
                 element: <Consol></Consol>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.console}`)
+                loader: ({ params }) => fetch(`${url}/getproduct2/${params.console}`)
             },
             {
                 path: "/mac/:imac",
                 element: <MacPro></MacPro>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.imac}`)
+                loader: ({ params }) => fetch(`${url}/getproduct2/${params.imac}`)
 
             },
             {
                 path: "/airpod/:airpod",
                 element: <Airpod></Airpod>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct2/${params.airpod}`)
+                loader: ({ params }) => fetch(`${url}/getproduct2/${params.airpod}`)
             },
             {
                 path: "/getproduct/:id",
                 element: <PrivetRout><ProductInfo></ProductInfo></PrivetRout>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct/${params.id}`)
+                loader: ({ params }) => fetch(`${url}/getproduct/${params.id}`)
 
             },
             {
                 path: "/update/:id",
                 element: <UpdatePage></UpdatePage>,
-                loader: ({ params }) => fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct/${params.id}`)
+                loader: ({ params }) => fetch(`${url}/getproduct/${params.id}`)
             },
             {
                 path: '/buy_now/:id',

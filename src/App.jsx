@@ -7,7 +7,7 @@ import Footer from './Page/Footer/Footer'
 
 function App() {
   // async function getData() {
-  //   const data = await axios.get('https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getproduct')
+  //   const data = await axios.get('${url}/getproduct')
   //   console.log(data.data);
 
   // }

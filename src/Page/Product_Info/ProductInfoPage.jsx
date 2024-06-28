@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import { userContext } from "../../Firebase/LoginContext";
 import axios from "axios";
 import swal from 'sweetalert';
+import url from "../../url";
 
 const ProductInfoPage = ({ product }) => {
     const { user } = useContext(userContext)
@@ -19,7 +20,7 @@ const ProductInfoPage = ({ product }) => {
         const cartData = {
             category, brandName, description, name, photo, price, rating, seller, productID: _id, email
         }
-        const res = await axios.post(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/addtocart`, cartData)
+        const res = await axios.post(`${url}/addtocart`, cartData)
         console.log(res.data.msg);
         if (res.data.msg) {
             swal("successfully!", "Your Product added", "success");

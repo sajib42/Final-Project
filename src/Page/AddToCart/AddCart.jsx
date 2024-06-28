@@ -9,6 +9,7 @@ import { userContext } from "../../Firebase/LoginContext";
 import { data } from "autoprefixer";
 import CartDataCard from "./CartDataCard";
 import Footer from "../Footer/Footer";
+import url from "../../url";
 
 
 const AddCart = () => {
@@ -17,7 +18,7 @@ const AddCart = () => {
     const [cart, setCart] = useState([]);
     // const data = useLoaderData()
     useEffect(() => {
-        fetch(`https://z-gear-server-ba2aj8qvn-zarjij-hasans-projects.vercel.app/getcartdata/${email}`)
+        fetch(`${url}/getcartdata/${email}`)
             .then(res => res.json())
             .then(data => setCart(data))
     }, [])
