@@ -1,9 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import DeliveryPage from "../Delivery/DeliveryPage";
 
 
 const PaymentPage = () => {
+    const location = useLocation();
+    const { selectedProduct } = location.state;
+    console.log(selectedProduct);
     return (
         <div>
 
@@ -27,7 +30,7 @@ const PaymentPage = () => {
                 <p className="divider"></p>
                 <div className="w-fit mx-auto flex items-center justify-center flex-col gap-4">
                     <h1 className="text-xl font-medium text-center">Cash On Delivery</h1>
-                    <Link className="w-fit m-auto" to={'/cash_pay'}>
+                    <Link state={{ selectedProduct: selectedProduct }} className="w-fit m-auto" to={'/cash_pay'}>
                         <img className="w-52    border rounded-md hover:bg-yellow-500  p-2" src="/src/assets/cash.jpg" alt="" />
                     </Link>
                 </div>

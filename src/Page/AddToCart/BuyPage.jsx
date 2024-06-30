@@ -68,7 +68,7 @@ const BuyPage = () => {
                                 <span className="sr-only sm:not-sr-only">to shop</span>
                             </button>
                         </Link>
-                        <Link to={`/payment/${_id}`} type="button" className="px-6 py-2 border rounded-md bg-violet-600 text-gray-50 border-violet-600">
+                        <Link state={{ selectedProduct: currentProduct }} to={`/payment/${_id}`} type="button" className="px-6 py-2 border rounded-md bg-violet-600 text-gray-50 border-violet-600">
                             <span className="sr-only sm:not-sr-only">Continue to </span>Checkout
                         </Link>
                     </div>

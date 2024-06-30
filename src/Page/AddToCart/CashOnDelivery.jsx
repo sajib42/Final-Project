@@ -1,10 +1,50 @@
+import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 const CashOnDelivery = () => {
+    const location = useLocation();
+    const { selectedProduct } = location.state;
+    console.log(selectedProduct);
+
+
+
+    const [userData, setUserData] = useState({});
+
+    const handleOnChange = e => {
+        const { name, value, type } = e.target
+        setUserData((prev) => ({ ...prev, [name]: type == "number" ? Number(value) : value }))
+    }
+    console.log(userData);
+
+    const handleSubmit = e => {
+        // window.localStorage.setItem("userData", JSON.stringify(userData))
+
+        e.preventDefault();
+
+        // Retrieve the existing array from local storage
+        let existingData = JSON.parse(window.localStorage.getItem("userData")) || [];
+
+        // Ensure existingData is an array
+        if (!Array.isArray(existingData)) {
+            existingData = [];
+        }
+
+        // Add the new user data to the array
+        const updatedData = [...existingData, { ...selectedProduct, userData }];
+
+        // Save the updated array back to local storage
+        window.localStorage.setItem("userData", JSON.stringify(updatedData));
+
+        console.log(updatedData);  // Log the updated data for debugging
+    }
+
+    // const newData = window.localStorage.getItem('userData')
+    // console.log(JSON.parse(newData));
+
     return (
+
         <div className="">
-
-
             <section className="flex items-center justify-between px-4">
                 <img className="w-20" src='/src/assets/cash.jpg' alt='' />
                 <p className="text-xl">Cash On Delivery</p>
@@ -17,52 +57,44 @@ const CashOnDelivery = () => {
                         <label className="label">
                             <span className="label-text">First name</span>
                         </label>
-                        <input type="text" placeholder="Jordan" className="input input-bordered w-full" />
+                        <input onChange={handleOnChange} type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email address</span>
                         </label>
-                        <input type="email" placeholder="jordansmith@mail.com" className="input input-bordered w-full" />
+                        <input onChange={handleOnChange} type="email" name="email" placeholder="example@mail.com" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Phone number</span>
                         </label>
-                        <input type="text" placeholder="+1 555-123-4567" className="input input-bordered w-full" />
+                        <input onChange={handleOnChange} type="number" name="phoneNumber" placeholder="+880" className="input input-bordered w-full" />
                     </div>
                     <div className="grid grid-cols-3 gap-4">
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Country</span>
+                                <span className="label-text"> Divisions</span>
                             </label>
-                            <select className="select select-bordered">
-                                <option>United States</option>
-                                {/* Add more options as needed */}
-                            </select>
+                            <input onChange={handleOnChange} type="text" name="division" placeholder="Dhaka" className="input input-bordered w-full" />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">State/Province</span>
+                                <span className="label-text">Address</span>
                             </label>
-                            <input type="text" placeholder="Illinois" className="input input-bordered w-full" />
+                            <input onChange={handleOnChange} type="text" name="Address" placeholder="Mirpur" className="input input-bordered w-full" />
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Postal code</span>
+                                <span className="label-text">Street</span>
                             </label>
-                            <input type="text" placeholder="62701" className="input input-bordered w-full" />
+                            <input onChange={handleOnChange} type="text" name="street" placeholder="Road 01" className="input input-bordered w-full" />
                         </div>
                     </div>
-                    {/* <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Address</span>
-                                    </label>
-                                    <input type="text" placeholder="456 Oak Avenue" className="input input-bordered w-full" />
-                                </div> */}
                 </div>
+
                 <div className="w-fit  mx-auto my-8">
-                    <button className="btn btn-wide text-white  btn-success" >Submit</button>
+                    <button onClick={handleSubmit} className="btn btn-wide text-white  btn-success" >Submit</button>
                 </div>
 
             </section>

@@ -4,6 +4,10 @@ import AdminNav from './sideNav/AdminNav';
 import OderTable from '../../Component/OderTable';
 
 const AdminDash = () => {
+    const newData = window.localStorage.getItem('userData')
+    const userData = JSON.parse(newData)
+    console.log(userData);
+
     return (
         <div>
 
@@ -13,7 +17,9 @@ const AdminDash = () => {
                     <AdminNav />
                 </div>
                 <div>
+                    <div>
 
+                    </div>
                     <OderTable />
                     <Outlet />
                 </div>
