@@ -25,6 +25,7 @@ import CardPayment from "../Page/AddToCart/CardPayment";
 import DeliveryPage from "../Page/Delivery/DeliveryPage";
 import NagadPay from "../Page/AddToCart/NagadPay";
 import url from "../url";
+import CashOnDelivery from "../Page/AddToCart/CashOnDelivery";
 
 
 
@@ -128,6 +129,10 @@ const router = createBrowserRouter([
             {
                 path: '/card_pay',
                 element: <CardPayment />
+            },
+            {
+                path: '/cash_pay',
+                element: <CashOnDelivery />
             },
             {
                 path: '/404',
