@@ -1,8 +1,55 @@
+import { useContext, useState } from "react";
 import Navbar from "../../layout/Navbar";
 import Footer from "../Footer/Footer";
+import { userContext } from "../../Firebase/LoginContext";
+import swal from "sweetalert";
 
 
 const About = () => {
+
+
+    const { user } = useContext(userContext)
+    const reviewName = user?.displayName;
+    const reviewEmail = user?.email;
+    const reviewInfo = { reviewName, reviewEmail }
+
+
+
+
+
+    const [userReview, setUserReview] = useState({});
+
+    const handleOnChange = e => {
+        const { name, value, type } = e.target
+        setUserReview((prev) => ({ ...prev, ...reviewInfo, [name]: type == "number" ? Number(value) : value }))
+    }
+    console.log(userReview);
+
+    const handleSubmit = e => {
+        // window.localStorage.setItem("userData", JSON.stringify(userData))
+
+        e.preventDefault();
+
+        // Retrieve the existing array from local storage
+        // let existingData = JSON.parse(window.localStorage.getItem("userReview")) || [];
+
+
+        // if (!Array.isArray(existingData)) {
+        //     existingData = [];
+        // }
+
+
+        // const updatedData = [...existingData, userReview];
+
+        // Save the updated array back to local storage
+        window.localStorage.setItem("userReview", JSON.stringify(userReview));
+
+        console.log(userReview);  // Log the updated data for debugging
+
+        swal("successful!", " User Feedback added", "success");
+
+    }
+
     return (
         <div>
             <div>
@@ -22,9 +69,9 @@ const About = () => {
                             <p className="leading-relaxed mb-5 text-gray-600">  I'm here to hear your thoughts, suggestions, and critiques. 🌟. Your feedback is the wind in my sails! 🚀 </p>
                             <div className="relative mb-4">
                                 <label htmlFor="message" className="leading-3 text-sm text-gray-600">Message</label>
-                                <textarea id="message" name="message" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+                                <textarea onChange={handleOnChange} id="message" name="userReviews" className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                             </div>
-                            <button className="text-white bg-[#111827] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+                            <button onClick={handleSubmit} className="text-white bg-[#111827] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
                             <p className="text-xs text-gray-500 mt-3">Tell us About your experience  using this site</p>
                         </div>
 

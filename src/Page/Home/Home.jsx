@@ -7,6 +7,8 @@ import Footer from '../Footer/Footer';
 import Products from '../Product_Ctg/Products';
 import CarouselMain from '../../Component/CarouselMain.';
 import ReviewPage from '../../Component/ReviewPage';
+import Stats from '../../Component/Stats';
+import Sponser from '../../Component/Sponser';
 
 const Home = () => {
     const [theme, setTheme] = useState("light")
@@ -35,13 +37,20 @@ const Home = () => {
                     {/* <BannerHome></BannerHome> */}
                     <CarouselMain />
                 </section>
+                <section className='mt-8'>
+                    <Sponser />
+                </section>
 
-                <section className='mt-16'>
+                <section className='mt-8'>
                     <Products></Products>
                 </section>
                 <section>
                     <ReviewPage />
                 </section>
+                <section>
+                    <Stats />
+                </section>
+
 
                 <section>
                     <Footer></Footer>

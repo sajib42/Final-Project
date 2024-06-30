@@ -36,7 +36,10 @@ const Navbar = (theme) => {
                         </div>
                         {/* <a className="btn btn-ghost normal-case text-xl">Z-Gear</a> */}
                         <div>
-                            <img className='w-28 hidden md:block   ' src={logo} alt="" />
+                            <Link to={'/'}>
+                                <img className='w-28 hidden md:block   ' src={logo} alt="" />
+                            </Link>
+
                         </div>
                     </div>
                     <div className="navbar-center hidden lg:flex">

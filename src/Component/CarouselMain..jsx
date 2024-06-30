@@ -3,6 +3,7 @@ import { Carousel } from "react-responsive-carousel";
 import img1 from './../././img/Banner/air2.png'
 import img2 from './../img/Banner/macbook2.png'
 import img3 from './../img/Banner/macbook3.png'
+import { Link } from "react-router-dom";
 
 
 const CarouselMain = () => {
@@ -15,7 +16,7 @@ const CarouselMain = () => {
                 showThumbs={false}
                 width={false}
                 stopOnHover={false}
-                interval={1000}
+                interval={1200}
             // className="w-fit mx-auto  "
 
             >
@@ -48,7 +49,7 @@ const BannerTitle = () => {
         <div className=" hidden lg:block text-2xl text-white absolute -translate-y-1/2 left-5 right-5 top-1/2 md:space-y-4" >
             <p className=" ">Welcome To </p>
             <p className="md:text-6xl font-semibold">Z-Gear Shop</p>
-            <button className="btn btn-sm">Explore</button>
+            <Link to={`mac/${'Laptop'}`}> <button className="btn btn-sm">Explore</button></Link>
         </div>
     )
 

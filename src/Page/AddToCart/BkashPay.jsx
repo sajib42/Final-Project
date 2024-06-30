@@ -6,10 +6,12 @@ const BkashPay = () => {
     const nextPage = useLocation('/')
     const handelBkash = (e) => {
         // e.preventDefault()
-        swal("successfull!", "Payment information added", "success");
+        // swal("successfull!", "Payment information added", "success");
         // setTimeout(
         //     nextPage
         //     , 1000);
+
+        swal("an error occur", " payment gateway failure", "error");
 
 
     }
@@ -68,7 +70,7 @@ const BkashPay = () => {
 
                     </form>
                     <div className="mt-6 w-full flex items-center justify-center">
-                        <Link to={'/delivery'} onClick={handelBkash} className="btn btn-wide bg-[#f18cb6] hover:bg-[#D12054] text-white">
+                        <Link to={'/'} onClick={handelBkash} className="btn btn-wide bg-[#f18cb6] hover:bg-[#D12054] text-white">
                             Proceed Now
                         </Link>
                     </div>

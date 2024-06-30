@@ -13,7 +13,7 @@ const ReviewPage = () => {
     console.log(reviews);
     return (
         <div className="max-w-6xl mx-auto mt-8">
-            <h1 className="text-2xl text-center ">What our <span className="text-purple-800 font-medium">Customers</span> say About us</h1>
+            <h1 className="text-2xl text-center ">What our <span className="text-purple-600 font-medium">Customers</span> say About us</h1>
             <p className="divider"></p>
             <div className="grid grid-cols-3 gap-4">
                 {

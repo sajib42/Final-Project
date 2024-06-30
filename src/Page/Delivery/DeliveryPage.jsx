@@ -14,18 +14,18 @@ const DeliveryPage = () => {
                             <p className="mt-4 text-gray-600 text-lg">
                                 Get your products delivered on time with ease. We allow you to schedule and manage your pickups and drops with a single tap.
                             </p>
-                            <a
-                                href="#"
+                            {/* <Link
+                                to={'/admin_dash_page'}
                                 className="mt-8 inline-block text-lg text-purple-600 hover:underline"
                             >
                                 See Delivery Progress &rarr;
-                            </a>
+                            </Link> */}
                         </div>
                         <p className="mt-4 text-gray-600 text-lg">
                             Thank you for shopping with us!
                         </p>
                         <Link className="btn btn-outline justify-end mt-4" to={'/'}>
-                            Back to Home
+                            Back to Shopping
                         </Link>
 
 

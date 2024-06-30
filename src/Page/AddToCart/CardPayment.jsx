@@ -108,8 +108,8 @@ const CardPayment = () => {
 
                         <div className="flex justify-end gap-4 mt-6 px-20">
                             <Link to={'/'}><button type="button" className="btn btn-outline">Cancel</button></Link>
-                            <Link onClick={() => {
-                                swal("error", "404", "error")
+                            <Link to={'/'} onClick={() => {
+                                swal("An Error Occur", " payment gateway failure 404", "error");
                             }} > <button type="submit" className="btn btn-primary">Continue</button></Link>
                         </div>
                     </form>

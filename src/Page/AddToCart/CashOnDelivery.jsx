@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import swal from "sweetalert";
 
 
 const CashOnDelivery = () => {
@@ -20,7 +21,7 @@ const CashOnDelivery = () => {
     const handleSubmit = e => {
         // window.localStorage.setItem("userData", JSON.stringify(userData))
 
-        e.preventDefault();
+        // e.preventDefault();
 
         // Retrieve the existing array from local storage
         let existingData = JSON.parse(window.localStorage.getItem("userData")) || [];
@@ -37,6 +38,9 @@ const CashOnDelivery = () => {
         window.localStorage.setItem("userData", JSON.stringify(updatedData));
 
         console.log(updatedData);  // Log the updated data for debugging
+
+        swal("successful!", "Payment information added", "success");
+
     }
 
     // const newData = window.localStorage.getItem('userData')
@@ -57,13 +61,13 @@ const CashOnDelivery = () => {
                         <label className="label">
                             <span className="label-text">First name</span>
                         </label>
-                        <input onChange={handleOnChange} type="text" name="name" placeholder="Name" className="input input-bordered w-full" />
+                        <input onChange={handleOnChange} type="text" name="userName" placeholder="Name" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email address</span>
                         </label>
-                        <input onChange={handleOnChange} type="email" name="email" placeholder="example@mail.com" className="input input-bordered w-full" />
+                        <input onChange={handleOnChange} type="email" name="userEmail" placeholder="example@mail.com" className="input input-bordered w-full" />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -94,11 +98,13 @@ const CashOnDelivery = () => {
                 </div>
 
                 <div className="w-fit  mx-auto my-8">
-                    <button onClick={handleSubmit} className="btn btn-wide text-white  btn-success" >Submit</button>
+                    <Link to={'/delivery'} onClick={handleSubmit} className="btn btn-wide text-white  btn-success">
+                        Submit
+                    </Link>
                 </div>
 
-            </section>
-        </div>
+            </section >
+        </div >
     );
 };
 

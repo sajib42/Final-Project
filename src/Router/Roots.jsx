@@ -26,6 +26,9 @@ import DeliveryPage from "../Page/Delivery/DeliveryPage";
 import NagadPay from "../Page/AddToCart/NagadPay";
 import url from "../url";
 import CashOnDelivery from "../Page/AddToCart/CashOnDelivery";
+import AdminDashPage from "../Page/Admin/Dashboard/AdminDashPage";
+import AdminReviews from "../Page/Admin/AdminReviews/AdminReviews";
+import OrderPage from "../Page/Admin/OrderPage";
 
 
 
@@ -157,7 +160,18 @@ const router = createBrowserRouter([
         path: '/admin',
         element: <PrivetRout> <AdminDash /> </PrivetRout>,
         children: [
-            {}
+            {
+                path: 'admin_dash_page',
+                element: <AdminDashPage />
+            },
+            {
+                path: 'admin_reviews',
+                element: <AdminReviews />
+            },
+            {
+                path: 'order_page',
+                element: <OrderPage />
+            }
         ]
     }
 

@@ -26,7 +26,7 @@ const PhoneCard = (e) => {
                     </div>
                     <div className="flex gap-2 flex-wrap ">
                         <Link to={`/getproduct/${_id}`}> <button className="btn btn-neutral mt-4  ">Details</button></Link>
-                        <Link className="btn  mt-4 " to={`/update/${_id}`}> Update</Link>
+                        {/* <Link className="btn  mt-4 " to={`/update/${_id}`}> Update</Link> */}
                     </div>
                 </div>
             </div>

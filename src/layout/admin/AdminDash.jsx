@@ -1,26 +1,21 @@
 
 import { Outlet } from 'react-router-dom';
 import AdminNav from './sideNav/AdminNav';
-import OderTable from '../../Component/OderTable';
+
 
 const AdminDash = () => {
-    const newData = window.localStorage.getItem('userData')
-    const userData = JSON.parse(newData)
-    console.log(userData);
+    // const newData = window.localStorage.getItem('userData')
+    // const userData = JSON.parse(newData)
+    // console.log(userData);
 
     return (
         <div>
 
-            <div className='flex '>
-                <div className='min-h-screen bg-[#F9FAFB]'>
-
+            <div className='flex gap-4 '>
+                <div className='min-h-screen bg-[#F9FAFB] w-3/12 '>
                     <AdminNav />
                 </div>
-                <div>
-                    <div>
-
-                    </div>
-                    <OderTable />
+                <div className='w-9/12 m-4 overscroll-y-auto'>
                     <Outlet />
                 </div>
             </div>
